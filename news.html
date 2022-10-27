@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"> 
+        <style>
+            :root
+            {
+                --primary-color: #dbe8ec;
+            }
+
+            * {font-family: 'Source Sans Pro', sans-serif; cursor: default; user-select: none;}
+
+            @keyframes appearance-buttons {
+                from {margin: 14px auto; opacity: 0}
+                to   {opacity: 1}
+            }
+
+            @keyframes appearance-title {
+                from {margin: 28px auto; opacity: 0}
+                to   {margin: 0; opacity: 1}
+            }
+
+            body {margin: 0}
+
+            #particles-js, #main
+            {
+                overflow: hidden;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            #particles-js
+            {
+                background-color: #1cb0c4;
+                background-image: url("");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+
+            .owf {overflow: auto; scrollbar-width: none; height: 100%; width: 100%;}
+            
+            .card
+            {
+                background: var(--primary-color);
+                border-radius: 12px;
+                padding: 16px 18px;
+
+                min-height: 320px; width: auto; margin: 24px 20%;
+            }
+        </style>
+        <script src="assets/particles.js"></script>
+    </head>
+    <body>
+        <div id="particles-js"></div>
+        <div id="main">
+            <div class="owf">
+              <div class="card">
+                <h2>Василий Петрович</h2>
+                <p>
+                  Лекция по психологии в поточной аудитории.
+<br>Лектор: Итак, уважаемые студенты, сейчас я покажу вам на примере три стадии раздражения человека!
+<br>Берет телефон и набирает произвольный номер. Включает громкую связь.
+<br>- Алло
+<br>- Здравствуйте, а Васю можно?
+<br>- Вы ошиблись номером.
+<br>- Извините.
+<br>Кладет трубку.
+<br>
+<br>- Итак, это была первая стадия раздражения - удивление.
+<br>
+<br>А сейчас я вам покажу вторую стадию. Лектор берет телефон и опять набирает тот же самый номер.
+<br>
+<br>- Алло
+<br>- Добрый день, а Васю можно?
+<br>- Я же вам сказал, нет здесь никакого Васи! *бросает трубку*
+<br>
+<br>- Вот, это была вторая стадия раздражения - злоба. А сейчас вы увидите последнюю стадию -гнев!
+<br>
+<br>Лектор опять набирает тот же номер...
+<br>- Да, слушаю!
+<br>- Здрасте, а Васю можно?
+<br>- *с криками* Пошел ты нахуй мудила, я тебе сказал нет здесь гребанного Васи. * бросает трубку*
+<br>
+<br>Тут с последних рядов студент тянет руку.
+<br>
+<br>- Извините, профессор, но вы забыли еще одну стадию.
+<br>- Как? Какую же?
+<br>- Полное охренение
+<br>
+<br>Студент подходит к лектору, берет у него телефон, набирает тот же номер.
+<br>
+<br>- Даа!
+<br>- Здравствуйте, это Вася, а мне никто не звонил?
+<br>В трубке тишина....
+                </p>
+              </div>
+              <div class="card"></div>
+              <div class="card"></div>
+              <div class="card"></div>
+            </div>
+        </div>
+        <script id="particles-config">
+            particlesJS("particles-js", {
+                "particles": {"number": {"value": 492,"density": {"enable": true,"value_area": 800}},
+                  "color": {
+                    "value": "#fff"
+                  },
+                  "shape": {
+                    "type": "circle",
+                    "stroke": {
+                      "width": 0,
+                      "color": "#000000"
+                    },
+                    "polygon": {
+                      "nb_sides": 5
+                    },
+                    "image": {
+                      "src": "img/github.svg",
+                      "width": 100,
+                      "height": 100
+                    }
+                  },
+                  "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                      "enable": false,
+                      "speed": 1,
+                      "opacity_min": 0.1,
+                      "sync": false
+                    }
+                  },
+                  "size": {
+                    "value": 6,
+                    "random": true,
+                    "anim": {
+                      "enable": false,
+                      "speed": 40,
+                      "size_min": 0.1,
+                      "sync": false
+                    }
+                  },
+                  "line_linked": {
+                    "enable": false,
+                    "distance": 500,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 2
+                  },
+                  "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "bounce",
+                    "bounce": false,
+                    "attract": {
+                      "enable": true,
+                      "rotateX": 946.9921162906311,
+                      "rotateY": 1104.824135672403
+                    }
+                  }
+                },
+                "interactivity": {
+                  "detect_on": "window",
+                  "events": {
+                    "onhover": {
+                      "enable": true,
+                      "mode": "bubble"
+                    },
+                    "onclick": {
+                      "enable": false,
+                      "mode": "push"
+                    },
+                    "resize": true
+                  },
+                  "modes": {
+                    "grab": {
+                      "distance": 400,
+                      "line_linked": {
+                        "opacity": 0.5
+                      }
+                    },
+                    "bubble": {
+                      "distance": 400,
+                      "size": 4,
+                      "duration": 0.3,
+                      "opacity": 1,
+                      "speed": 3
+                    },
+                    "repulse": {
+                      "distance": 200,
+                      "duration": 0.4
+                    },
+                    "push": {
+                      "particles_nb": 4
+                    },
+                    "remove": {
+                      "particles_nb": 2
+                    }
+                  }
+                },
+                "retina_detect": true
+              })
+        </script>
+    </body>
+</html>

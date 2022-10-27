@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="assets/particles.js"></script>
+        <style>
+            @media screen and (min-width: 1000px) 
+{
+    .content 
+    {
+        width: 70%;
+        border-radius: 60px;
+        height: 89%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 1000px) 
+{
+    .content 
+    {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        border-radius: 0px;
+    }
+}
+
+
+body {margin: 0;}
+a {text-decoration: none;}
+
+
+@keyframes bakcground-gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.wrapper 
+{
+    position: fixed; top: 0; left: 0; 
+    width: 100%; height: 100%;
+}
+
+@keyframes show {
+    0% {opacity: 0; margin-top: -30px;}
+    100% {opacity: 1;}
+}
+
+.content 
+{
+    animation: show 1s ease;
+
+    background-color: white;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 1px 8px 61px -3px rgba(117,117,117,0.81);
+    -webkit-box-shadow: 1px 8px 61px -3px rgba(117,117,117,0.81);
+    -moz-box-shadow: 1px 8px 61px -3px rgba(117,117,117,0.81);
+
+    transition-property: width, border-radius;
+    transition-duration: .5s;
+}
+
+.content * {font-family: "Source Sans Pro", sans-serif; opacity: 1; animation: show 1s ease;}
+
+.content .header {display: flex;}
+
+.content .header .avatar > img 
+{
+    height: 160px; width: 160px; border-radius: 80px;
+    box-shadow: 1px 8px 17px -3px rgb(117 117 117 / 81%);;
+    -webkit-box-shadow: 1px 8px 17px -3px rgb(117 117 117 / 81%);;
+    -moz-box-shadow: 1px 8px 17px -3px rgb(117 117 117 / 81%);;
+}
+
+.content .header .info         {margin-left: 24px;}
+.content .header .info h1      {margin: 12px 0 6px; font-size: 2.8em;}
+.content .header .info p       {margin: 14px 0 14px; font-size: 1.25em;}
+
+.content .main 
+{
+    margin-top: 16px; 
+    height: 100%; width: 100%; 
+
+    display: flex; 
+    flex-direction: row; 
+    overflow: hidden hidden;
+}
+
+.content .main .primary  
+{
+    flex: 1 0 auto; 
+    margin-left: 36px; 
+    width: 120px;
+    padding-right: 16px;
+
+    overflow: hidden auto; 
+    scrollbar-width: thin;
+} 
+
+.content .main .contacts 
+{
+    flex: 0 0 auto; 
+    min-width: 120px;
+    max-width: 240px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.content .main .contacts .contacts-container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.content .main .contacts .contacts-container > span > img  {height: 22px; width: 22px;}
+.content .main .contacts .contacts-container > span > span {margin-left: 12px}
+.content .main .contacts .contacts-container > span
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.contacts > div > p {margin-top: 0;}
+
+
+
+#particles-js
+            {
+                overflow: hidden;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            #particles-js
+            {
+                background-color: #1cb0c4;
+                background-image: url("");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="particles-js"></div>
+        <div class="wrapper">
+            <div class="content">
+                <div class="header">
+                    <div class="avatar">
+                        <img src="https://habrastorage.org/webt/z1/fp/kr/z1fpkrkdsfkrgd351rjvnywvptk.jpeg">
+                    </div>
+                    <div class="info">
+                        <h1>Иванов Иван Иванович</h1>
+                        <p>И швец, и жнец и на дуде игрец, и в хоре певец, и в бою молодец.</p>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="contacts">
+                        <h3>Контактная информация</h4>
+                        <div class="contacts-container">
+                            <span>
+                                <img src="https://img.icons8.com/tiny-color/344/calendar.png">
+                                <span>1 января 2020</span>
+                            </span>
+                            <span>
+                                <img src="https://img.icons8.com/tiny-color/344/email.png">
+                                <span><a href="mailto:ivanivanov@pochta.ru">ivanivanov@pochta.ru</a></span>
+                            </span>
+                            <span>
+                                <img src="https://img.icons8.com/tiny-color/344/phone.png">
+                                <span><a href="tel:+79238123212">+7 (923) 812-32-12</a></span>
+                            </span>
+                        </div>
+                        <h3>Навыки</h3>
+                        <div>
+                            <p>Активные продажи, расширение клиентской базы</p>
+                            <p>Работа с ключевыми клиентами, устранение возникших разногласий</p>
+                            <p>Руководство отделом продаж</p>
+                        </div>
+                    </div>
+                    <div class="primary">
+                        <h2>Достижения</h2>
+                        <ul>
+                            <li>Создал отдел продаж с «0». Впоследствии отдел (5 человек) под моим руководством регулярно выполнял план по привлечению новых клиентов и продажам</li>
+                            <li>Привел в компанию 7 ключевых клиентов (совокупно до 50% заказов)</li>
+                            <li>Разработал и внедрил в компании технологию продаж технически сложного оборудования</li>
+                        </ul>
+                        <h2>Опыт работы</h2>
+                        <div class="experience">
+                            <div>
+                                <div class="date">октябрь 2008 - февраль 2014</div>
+                                <div class="job">Руководитель отдела продаж</div>
+                                <div class="place">ООО «ННН-групп» (<a href="www.nnn-grup.com">www.nnn-grup.com</a>), г. Санкт-Петербург</div>
+                                <div class="description">
+                                    <p>Сфера деятельности компании: оптовая торговля строительной техникой и комплектующими к ней</p>
+                                    <ul>
+                                        <li>Руководство отделом продаж (в подчинении до 5 человек)</li>
+                                        <li>Работа с ключевыми клиентами, устранение возникших разногласий</li>
+                                        <li>Работа с дебиторской задолженностью</li>    
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="date">март 2014 - июнь 2026</div>
+                                <div class="job">Менеджер по продажам</div>
+                                <div class="place">ООО «ХХХ-групп» (<a href="www.xxx-grup.com">www.xxx-grup.com</a>), г. Санкт-Петербург</div>
+                                <div class="description">
+                                    <p>Сфера деятельности компании: оптовая торговля строительной техникой</p>
+                                    <ul>
+                                        <li>Активные продажи, расширение клиентской базы</li>
+                                        <li>Работа с ключевыми клиентами, устранение возникших разногласий</li>
+                                        <li>Своевременный и систематический мониторинг цен аналогичной продукции конкурентов</li>
+                                        <li>Работа с дебиторской задолженностью</li>    
+                                    </ul>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script id="particles-config">
+            particlesJS("particles-js", {
+                "particles": {"number": {"value": 492,"density": {"enable": true,"value_area": 800}},
+                  "color": {
+                    "value": "#fff"
+                  },
+                  "shape": {
+                    "type": "circle",
+                    "stroke": {
+                      "width": 0,
+                      "color": "#000000"
+                    },
+                    "polygon": {
+                      "nb_sides": 5
+                    },
+                    "image": {
+                      "src": "img/github.svg",
+                      "width": 100,
+                      "height": 100
+                    }
+                  },
+                  "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                      "enable": false,
+                      "speed": 1,
+                      "opacity_min": 0.1,
+                      "sync": false
+                    }
+                  },
+                  "size": {
+                    "value": 6,
+                    "random": true,
+                    "anim": {
+                      "enable": false,
+                      "speed": 40,
+                      "size_min": 0.1,
+                      "sync": false
+                    }
+                  },
+                  "line_linked": {
+                    "enable": false,
+                    "distance": 500,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 2
+                  },
+                  "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "bounce",
+                    "bounce": false,
+                    "attract": {
+                      "enable": true,
+                      "rotateX": 946.9921162906311,
+                      "rotateY": 1104.824135672403
+                    }
+                  }
+                },
+                "interactivity": {
+                  "detect_on": "window",
+                  "events": {
+                    "onhover": {
+                      "enable": true,
+                      "mode": "bubble"
+                    },
+                    "onclick": {
+                      "enable": false,
+                      "mode": "push"
+                    },
+                    "resize": true
+                  },
+                  "modes": {
+                    "grab": {
+                      "distance": 400,
+                      "line_linked": {
+                        "opacity": 0.5
+                      }
+                    },
+                    "bubble": {
+                      "distance": 400,
+                      "size": 4,
+                      "duration": 0.3,
+                      "opacity": 1,
+                      "speed": 3
+                    },
+                    "repulse": {
+                      "distance": 200,
+                      "duration": 0.4
+                    },
+                    "push": {
+                      "particles_nb": 4
+                    },
+                    "remove": {
+                      "particles_nb": 2
+                    }
+                  }
+                },
+                "retina_detect": true
+              })
+        </script>
+    </body>
+</html>
